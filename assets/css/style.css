@@ -1,0 +1,264 @@
+html {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: normal;
+    /* font-family: Gelasio, serif; */
+}
+
+.btn {
+    background: #1B75BB;
+    border-radius: 5px;
+    font-weight: 500;
+    line-height: 160%;
+    color: #FFFFFF;
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 30px;
+}
+
+h2 {
+    font-family: Gelasio, serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 140%;
+    color: #081F32;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0px;
+    font-family: Gelasio, serif;
+}
+
+.logo {}
+
+.logo img {}
+
+.nav {
+    padding-right: 18%;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.list-item {
+    margin: 10px;
+}
+
+.item-link {
+    font-weight: 500;
+    line-height: 150%;
+    color: rgba(8, 31, 50, 0.7);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-list span {
+    color: #1B75BB;
+}
+
+/* FIRST SECTION */
+.fs {
+    background: url("../img/intro.jpg") center no-repeat;
+    background-size: cover;
+    min-height: 690px;
+    padding-top: 214px;
+    padding-bottom: 97px;
+}
+
+.top {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(27, 117, 187, 0.8);
+    margin-bottom: 15px;
+}
+
+.fs-title {
+    font-family: Gelasio, serif;
+    font-weight: 600;
+    font-size: 57px;
+    line-height: 120%;
+    color: #081F32;
+    margin-bottom: 25px;
+    max-width: 456px;
+}
+
+.fs-title span {
+    color: rgba(27, 117, 187, 1);
+}
+
+.fs-description {
+    font-size: 18px;
+    line-height: 160%;
+    color: rgba(8, 31, 50, 0.6);
+    margin-bottom: 34px;
+    max-width: 347px;
+}
+
+@media screen and (max-width: 768px) {
+    .fs {
+        padding-top: 178px;
+        padding-bottom: 90px;
+        min-height: 630px;
+    }
+
+    .fs-top {
+        font-size: 20px;
+    }
+
+    .fs-title {
+        font-size: 47px;
+    }
+
+    .fs-description {
+        font-size: 16px;
+        max-width: 261px;
+    }
+}
+
+/* @media screen and (max-width: 575px) {
+    .fs {
+        padding-top: 154px;
+        padding-bottom: 86px;
+        min-height: 500px;
+    }
+
+    .fs-title {
+        font-size: 32px;
+    }
+
+    .fs-description {
+        font-size: 16px;
+    }
+} */
+
+@media screen and (max-width: 425px) {
+    .fs {
+        padding-top: 162px;
+        padding-bottom: 72px;
+        min-height: 630px;
+    }
+
+    .fs-top {
+        font-size: 18px;
+    }
+
+    .fs-title {
+        font-size: 42px;
+    }
+
+    .fs-description {
+        font-size: 16px;
+        max-width: 271px;
+    }
+}
+
+/* SEARCH */
+.search {
+    margin-bottom: 201px;
+}
+
+.relative {
+    position: relative;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.21);
+    backdrop-filter: blur(70px);
+/* Note: backdrop-filter has minimal browser support */
+    border-radius: 10px;
+    padding: 24px 49px 24px 19px;
+    position: absolute;
+    left: -21px;
+    top: -49px;
+}
+
+.info-inner {
+    display: block;
+    margin: 0px 30px;
+}
+
+.info-title {
+    font-weight: 500;
+    line-height: 160%;
+    color: #081F32;
+    margin-bottom: 12px;
+}
+
+.info-dsp {
+    line-height: 160%;
+    color: rgba(8, 31, 50, 0.8);
+}
+
+.info-border {
+    border-right: 2px solid rgba(157, 172, 184, 0.4);
+    margin: 14px 0px;
+}
+
+.info a {
+    margin-left: 30px;
+}
+
+/* PRESENTATION */
+.presentation {}
+
+.presentation-inner {}
+
+.pictures {}
+
+.ripples {
+    position: absolute;
+    left: -176px;
+    top: 234px;
+    z-index: 1;
+}
+
+.bell {
+    position: absolute;
+    top: 57px;
+    left: -87px;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.hands {
+    position: absolute;
+    top: 0px;
+    left: 115px;
+    z-index: 1;
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+.txt {
+    padding: 80px 28px 160px 682px;
+}
+
+.txt h2 {
+    margin-bottom: 33px;
+}
