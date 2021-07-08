@@ -49,7 +49,9 @@ header {
 
 .logo {}
 
-.logo img {}
+.logo img {
+    display: block;
+}
 
 .nav {
     padding-right: 18%;
@@ -60,9 +62,7 @@ header {
     list-style-type: none;
 }
 
-.list-item {
-    margin: 10px;
-}
+.list-item {}
 
 .item-link {
     font-weight: 500;
@@ -70,10 +70,32 @@ header {
     color: rgba(8, 31, 50, 0.7);
     text-decoration: none;
     padding: 10px;
+    display: inline-block;
 }
 
-.nav-list span {
+.active {
     color: #1B75BB;
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        padding-right: 0px;
+    }
+
+    .logo img {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header-inner {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .list-item {
+        margin: 26px 0px;
+    }
 }
 
 /* FIRST SECTION */
@@ -124,9 +146,9 @@ header {
         min-height: 630px;
     }
 
-    .fs-top {
+    /* .top {
         font-size: 20px;
-    }
+    } */
 
     .fs-title {
         font-size: 47px;
@@ -156,12 +178,11 @@ header {
 
 @media screen and (max-width: 425px) {
     .fs {
-        padding-top: 162px;
-        padding-bottom: 72px;
-        min-height: 630px;
+        padding-top: 295px;
+        padding-bottom: 166px;
     }
 
-    .fs-top {
+    .top {
         font-size: 18px;
     }
 
@@ -176,9 +197,7 @@ header {
 }
 
 /* SEARCH */
-.search {
-    margin-bottom: 201px;
-}
+.search {}
 
 .relative {
     position: relative;
@@ -200,7 +219,22 @@ header {
 
 .info-inner {
     display: block;
-    margin: 0px 30px;
+    margin: 0 30px;
+    position: relative;
+}
+
+.info-inner::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: -30px;
+    height: 34px;
+    width: 2px;
+    background: rgba(157, 172, 184, 0.4);
+}
+
+.info-inner:first-child::after {
+    display: none;
 }
 
 .info-title {
@@ -217,48 +251,166 @@ header {
 
 .info-border {
     border-right: 2px solid rgba(157, 172, 184, 0.4);
-    margin: 14px 0px;
 }
 
 .info a {
     margin-left: 30px;
 }
 
-/* PRESENTATION */
-.presentation {}
-
-.presentation-inner {}
-
-.pictures {}
-
-.ripples {
-    position: absolute;
-    left: -176px;
-    top: 234px;
-    z-index: 1;
+@media screen and (max-width: 768px) {
+   .info {
+    position: static;
+    margin: -49px auto 0px auto;
+   }
 }
 
-.bell {
+@media screen and (max-width: 425px) {
+    .info {
+        flex-wrap: wrap;
+    }
+
+    .info-inner {
+        margin: 5px 30px;
+    }
+
+    .info-inner::after {
+        display: none;
+    }
+ 
+    .info-title {
+        margin-bottom: 3px;
+    }
+
+    .info-dsp {
+        margin-bottom: 9px;
+    }
+ }
+
+/* PRESENTATION */
+.presentation {
+    padding: 258px 0 140px 0;
+}
+
+.container--big {
+    max-width: 1245px;
+}
+
+.presentation-inner {
+    display: flex;
+}
+
+.pictures {
+    width: 51.9%;
+    position: relative;
+}
+
+.pictures::before {
+    content: '';
     position: absolute;
-    top: 57px;
-    left: -87px;
+    left: -86px;
+    bottom: -80px;
+    height: 228px;
+    width: 228px;
+    background: url(../img/ripples.png) center no-repeat;
+    background-size: cover;
+}
+
+/* .pictures-inner {
+    position: relative;
+} */
+
+/* .pictures-inner::before {
+    content: '';
+    position: absolute;
+    left: -86px;
+    bottom: -80px;
+    height: 228px;
+    width: 228px;
+    background: url(../img/ripples.png) center no-repeat;
+    background-size: cover;
+} */
+
+.bell {
+    display: block;
+    position: relative;
     z-index: 2;
     border-radius: 10px;
 }
 
 .hands {
     position: absolute;
-    top: 0px;
-    left: 115px;
+    top: -57px;
+    right: -57px;
     z-index: 1;
     opacity: 0.5;
     border-radius: 10px;
 }
 
 .txt {
-    padding: 80px 28px 160px 682px;
+    width: 48.1%;
+    padding-left: 155px;
 }
 
 .txt h2 {
     margin-bottom: 33px;
 }
+
+@media screen and (max-width: 768px) {
+    .presentation {
+        padding: 180px 0 140px 0;
+    }
+
+    .pictures::before {
+        bottom: -27px;
+        height: 60%;
+        width: 60%;
+    }
+
+    .bell {
+        top: 46px;
+    }
+
+    .hands {
+        top: -18px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .txt {
+        padding-left: 130px;
+    }
+ }
+
+ @media screen and (max-width: 425px) {
+    .presentation {
+        padding: 180px 0 140px 0;
+    }
+
+    .presentation-inner {
+        flex-wrap: wrap;
+    }
+
+    .pictures {
+        width: 100%;
+    }
+
+    .bell {
+        top: 0;
+    }
+
+    .hands {
+        top: -38px;
+        right: -15px;
+    }
+
+    .pictures::before {
+        display: none;
+    }
+
+    .txt {
+        width: 100%;
+        padding: 50px 0;
+    }
+ }
